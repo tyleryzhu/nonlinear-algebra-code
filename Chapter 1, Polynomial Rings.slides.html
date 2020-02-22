@@ -13199,51 +13199,6 @@ a.anchor-link {
 <div class="reveal">
 <div class="slides">
 <section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-Macaulay2"><pre><span></span>--initial setup
---%mode=pretty
---%timeout=10
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[magic succeeded] mode = pretty
-[magic succeeded] timeout = 10</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[4]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<pre></pre><pre style="color: gray"></pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13255,17 +13210,17 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In Example 1.4, we look at the following two ideals over $\mathbb{Q}[x]$:</p>
-$$ I = \langle x^3 +6x^2 +12x+8 \rangle \text{ and } J = \langle x^2 +x−2 \rangle. $$<p>Let's try computing their sum, intersection, product, and quotient.</p>
+$$ I = \langle x^3 +6x^2 +12x+8 \rangle \text{ and } J = \langle x^2 +x−2 \rangle. $$<p>Let's try computing their intersection, sum, product, and quotient.</p>
 
 </div>
 </div>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-Macaulay2"><pre><span></span>R = QQ[x]
+<div class=" highlight hl-Macaulay2"><pre><span></span>R = QQ[x] -- set our base ring
 </pre></div>
 
     </div>
@@ -13278,16 +13233,17 @@ $$ I = \langle x^3 +6x^2 +12x+8 \rangle \text{ and } J = \langle x^2 +x−2 \ran
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
+
+<div class="output_html rendered_html output_subarea output_execute_result">
 <pre>
-o2 = R
-
-o2 : PolynomialRing
+R</pre><pre style="color: gray">
+PolynomialRing
 </pre>
 </div>
+
 </div>
 
 </div>
@@ -13296,13 +13252,13 @@ o2 : PolynomialRing
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-Macaulay2"><pre><span></span>I = ideal(x^3+6*x^2+12*x+8)
-J = ideal(x^2+x-2)
-print(&quot;I:&quot;, I)
-print(&quot;J:&quot;, J)
+<div class=" highlight hl-Macaulay2"><pre><span></span>I = ideal((x+2)^3)
+J = ideal((x+2)*(x-1))
+print(concatenate{&quot;I: &quot;, toString I})
+print(concatenate{&quot;J: &quot;, toString J})
 </pre></div>
 
     </div>
@@ -13319,18 +13275,16 @@ print(&quot;J:&quot;, J)
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>            3     2
-(I:, ideal(x  + 6x  + 12x + 8))
+<pre>I: ideal(x^3+6*x^2+12*x+8)
 
-            2
-(J:, ideal(x  + x - 2))
+J: ideal(x^2+x-2)
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[29]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -13346,46 +13300,12 @@ print(&quot;J:&quot;, J)
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-Macaulay2"><pre><span></span>InJ = gens(gb(intersect(I,J)))
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[51]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<pre>
-| x4+5x3+6x2-4x-8 |</pre><pre style="color: gray">
-        1       1
-Matrix R  <--- R
-</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-Macaulay2"><pre><span></span>(x-1)*(x+2)^3
+<div class=" highlight hl-Macaulay2"><pre><span></span>InJ = intersect(I,J)
+print(InJ)
+factor InJ_0 -- get the 0th (in this case, only) generator, factored
 </pre></div>
 
     </div>
@@ -13402,11 +13322,26 @@ Matrix R  <--- R
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>stdio:2:3:(3): error: no method for binary operator - applied to objects:
---            x (of class Symbol)
---      -     1 (of class ZZ)
+<pre>         4     3     2
+ideal(- x  - 5x  - 6x  + 4x + 8)
 </pre>
 </div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[10]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<pre>
+              3
+(x - 1)(x + 2) (-1)</pre><pre style="color: gray">
+Expression of class Product
+</pre>
+</div>
+
 </div>
 
 </div>
@@ -13415,16 +13350,146 @@ Matrix R  <--- R
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-Macaulay2"><pre><span></span> 
+<div class=" highlight hl-Macaulay2"><pre><span></span>IplusJ = I+J
+ideal(gens(gb IplusJ))
 </pre></div>
 
     </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[12]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<pre>
+ideal(x + 2)</pre><pre style="color: gray">
+Ideal of R
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Macaulay2"><pre><span></span>IprodJ = I*J
+print(IprodJ)
+factor IprodJ_0
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>       5     4      3     2
+ideal(x  + 7x  + 16x  + 8x  - 16x - 16)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[15]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<pre>
+              4
+(x - 1)(x + 2)</pre><pre style="color: gray">
+Expression of class Product
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-Macaulay2"><pre><span></span>ImodJ = I:J
+print(ImodJ)
+factor ImodJ_0
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>       2
+ideal(x  + 4x + 4)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[18]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<pre>
+       2
+(x + 2)</pre><pre style="color: gray">
+Expression of class Product
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
