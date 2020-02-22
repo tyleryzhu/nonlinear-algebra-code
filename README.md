@@ -38,3 +38,9 @@ $ jupyter notebook
 ```
 
 If you get an error with "Not a directory: 'xdg-settings'", you may need to pass the ```--no-browser``` flag (this is a current bug in Jupyter with Python3.7).
+
+To present a notebook as a presentation, go to View > Cell Toolbar > Slideshow and identify each slide. Then run
+
+```
+jupyter nbconvert Chapter\ 1\,\ Polynomial\ Rings.ipynb --to slides --post serve
+```
