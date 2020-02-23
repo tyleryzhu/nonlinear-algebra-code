@@ -48,4 +48,4 @@ jupyter nbconvert Chapter\ 1\,\ Polynomial\ Rings.ipynb --to slides --post serve
 
 To view the jupyter notebooks properly rendered, go to the following links:
 
-* [Chapter 1: Polynomial Rings](https://github.com/tyleryzhu/nonlinear-algebra-code/blob/master/Chapter%201%2C%20Polynomial%20Rings.ipynb)
+* [Chapter 1: Polynomial Rings](https://nbviewer.jupyter.org/github/tyleryzhu/nonlinear-algebra-code/blob/master/Chapter%201%2C%20Polynomial%20Rings.ipynb?flush_cache=true)
