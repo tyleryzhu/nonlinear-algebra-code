@@ -1,5 +1,5 @@
 # nonlinear-algebra-code
-Code examples for Nonlinear Algebra in Macaulay2
+Code examples for [Nonlinear Algebra](https://math.berkeley.edu/~bernd/math191.html) in Macaulay2
 
 ## Getting Started
 
