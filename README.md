@@ -1,7 +1,15 @@
 # nonlinear-algebra-code
-Code examples for [Nonlinear Algebra](https://math.berkeley.edu/~bernd/math191.html) in Macaulay2
+Code examples for [Nonlinear Algebra](https://math.berkeley.edu/~bernd/math191.html) in Macaulay2.
+
+## Viewing the code
+
+To view the code and the LaTeX in the notebooks properly rendered, go to the following links:
+
+* [Chapter 1: Polynomial Rings](https://nbviewer.jupyter.org/github/tyleryzhu/nonlinear-algebra-code/blob/master/Chapter%201%2C%20Polynomial%20Rings.ipynb?flush_cache=true)
 
 ## Getting Started
+
+### Prerequisites
 
 We will be using the Macaulay2 Jupyter Kernel from here: https://github.com/radoslavraynov/Macaulay2-Jupyter-Kernel
 
@@ -32,7 +40,14 @@ $ pip install macaulay2-jupyter-kernel
 $ python3 -m m2_kernel.install --sys-prefix
 ```
 
-To start up a jupyter instance, run
+### Running the code locally
+
+First clone the github repository.
+```
+$ git clone https://github.com/tyleryzhu/nonlinear-algebra-code.git
+$ cd nonlinear-algebra-code
+```
+To start up a jupyter instance inside this directory, run
 ```
 $ jupyter notebook
 ```
@@ -44,8 +59,7 @@ To present a notebook as a presentation, go to View > Cell Toolbar > Slideshow a
 ```
 jupyter nbconvert Chapter\ 1\,\ Polynomial\ Rings.ipynb --to slides --post serve
 ```
-## Viewing content
 
-To view the jupyter notebooks properly rendered, go to the following links:
+There are also pdfs for your viewing, but those are buggy right now and need to be worked out.
 
-* [Chapter 1: Polynomial Rings](https://nbviewer.jupyter.org/github/tyleryzhu/nonlinear-algebra-code/blob/master/Chapter%201%2C%20Polynomial%20Rings.ipynb?flush_cache=true)
+If you have any questions, feel free to open an issue/pull request or email any of the contributors. 
