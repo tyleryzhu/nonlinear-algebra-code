@@ -5,7 +5,7 @@ Code examples for [Nonlinear Algebra](https://math.berkeley.edu/~bernd/math191.h
 
 To view the code and the LaTeX in the notebooks properly rendered, go to the following links:
 
-* [Chapter 1: Polynomial Rings](https://nbviewer.jupyter.org/github/tyleryzhu/nonlinear-algebra-code/blob/master/Chapter%201%2C%20Polynomial%20Rings.ipynb?flush_cache=true)
+* [Chapter 1: Polynomial Rings](https://nbviewer.jupyter.org/github/tyleryzhu/nonlinear-algebra-code/blob/master/Chapter%2001%3A%20Polynomial%20Rings/Chapter%201%2C%20Polynomial%20Rings.ipynb?flush_cache=true)
 
 ## Getting Started
 
