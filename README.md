@@ -5,7 +5,8 @@ Code examples for [Nonlinear Algebra](https://math.berkeley.edu/~bernd/math191.h
 
 To view the code and the LaTeX in the notebooks properly rendered, go to the following links:
 
-* [Chapter 1: Polynomial Rings](https://nbviewer.jupyter.org/github/tyleryzhu/nonlinear-algebra-code/blob/master/Chapter%2001%3A%20Polynomial%20Rings/Chapter%201%2C%20Polynomial%20Rings.ipynb?flush_cache=true)
+* [Chapter 1: Polynomial Rings (Examples)](https://nbviewer.jupyter.org/github/tyleryzhu/nonlinear-algebra-code/blob/master/Chapter%2001%3A%20Polynomial%20Rings/Ch1-Examples.ipynb?flush_cache=true)
+* [Chapter 4: Mapping and Projecting (Exercises)](https://nbviewer.jupyter.org/github/tyleryzhu/nonlinear-algebra-code/blob/master/Chapter%2004%3A%20Mapping%20and%20Projecting/Ch4-Exercises.ipynb?flush_cache=true)
 
 ## Getting Started
 
@@ -62,4 +63,4 @@ jupyter nbconvert Chapter\ 1\,\ Polynomial\ Rings.ipynb --to slides --post serve
 
 There are also pdfs for your viewing, but those are buggy right now and need to be worked out.
 
-If you have any questions, feel free to open an issue/pull request or email any of the contributors. 
+If you have any questions, feel free to open an issue/pull request or email any of the contributors.
